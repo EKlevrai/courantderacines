@@ -1,1 +1,7 @@
-
+.menu-link {
+	color: #CCC;
+}
+.menu-link:hover {
+	text-decoration: none;
+	color: #DDD;	
+}

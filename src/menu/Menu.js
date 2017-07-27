@@ -24,14 +24,14 @@ class Menu extends Component {
 			 <Navbar.Collapse>
 				 <Nav>
 					 <NavItem eventKey={1}>
-						 <Link to={`/charts`}>
+						 <Link to={`/charts`}  className={'menu-link'}>
 							 <span>
 								 Charts
 							 </span>
 						 </Link>
 					 </NavItem>
 					 <NavItem eventKey={2}>
-						 <Link to={`/maps`}>
+						 <Link to={`/maps`} className={'menu-link'}>
 							 <span>
 								 Maps
 							 </span>
