@@ -1,7 +1,7 @@
 .menu-link {
 	color: #CCC;
 }
-.menu-link:hover {
-	text-decoration: none;
-	color: #DDD;	
+.menu-link:hover, .menu-link:active {
+	text-decoration: none !important;
+	color: #DDD;
 }

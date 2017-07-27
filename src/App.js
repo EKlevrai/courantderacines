@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import Menu from './menu/Menu';
 
@@ -11,6 +11,8 @@ class App extends Component {
 				<div>
 					<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"></link>
 					<Menu/>
+					<Route path="/charts"/>
+					<Route path="/maps"/>
 				</div>
 			</BrowserRouter>
     );
