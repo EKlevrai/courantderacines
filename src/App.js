@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
+import Menu from './menu/Menu';
 
 class App extends Component {
 
   render() {
     return (
-			<div> Hello world ! </div>
+			<BrowserRouter>
+				<div>
+					<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"></link>
+					<Menu/>
+				</div>
+			</BrowserRouter>
     );
   }
 }
