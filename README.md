@@ -1,7 +1,3 @@
-Welcome to StackEdit!
-===================
-
-
 Hello world ! This is the **courantderacines project** readme file.
 
 About the project
