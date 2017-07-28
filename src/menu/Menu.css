@@ -1,7 +1,16 @@
-.menu-link {
+.menu-link, .menu-home-link {
 	color: #CCC;
 }
+
+
+.menu a:hover,  .menu a:active {
+text-decoration: none !important;
+}
+
+.menu-home-link:hover, .menu-home-link:active {
+	color: #edd55e !important;
+}
+
 .menu-link:hover, .menu-link:active {
-	text-decoration: none !important;
-	color: #DDD;
+	color: #DDD !important;
 }

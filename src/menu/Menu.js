@@ -1,42 +1,38 @@
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Nav, Navbar, NavItem } from 'react-bootstrap';
+import { Nav, Navbar, Glyphicon} from 'react-bootstrap';
 import './Menu.css';
 
 class Menu extends Component {
-	componentDidMount(){
-	}
-
   render() {
 		return (
-			<Navbar inverse collapseOnSelect>
+			<Navbar inverse collapseOnSelect className={'menu'}>
 			 <Navbar.Header>
 				 <Navbar.Brand>
-					 <Link to={`/`}>
-						 <span>
-							 Home
-						 </span>
+					 <Link to={`/`}  className={'menu-home-link'}>
+						 <Glyphicon glyph="home"/>
 					 </Link>
 				 </Navbar.Brand>
 				 <Navbar.Toggle />
 			 </Navbar.Header>
 			 <Navbar.Collapse>
 				 <Nav>
-					 <NavItem eventKey={1}>
+					 <Navbar.Brand eventKey={1}>
 						 <Link to={`/charts`}  className={'menu-link'}>
 							 <span>
 								 Charts
 							 </span>
 						 </Link>
-					 </NavItem>
-					 <NavItem eventKey={2}>
+					 </Navbar.Brand>
+					 <Navbar.Brand eventKey={2}>
 						 <Link to={`/maps`} className={'menu-link'}>
 							 <span>
 								 Maps
 							 </span>
 						 </Link>
-					 </NavItem>
+					 </Navbar.Brand>
 				 </Nav>
 			 </Navbar.Collapse>
 		 </Navbar>
