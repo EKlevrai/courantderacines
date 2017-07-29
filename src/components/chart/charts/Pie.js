@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
 import './Pie.css';
+import '../utils/toolTip/ToolTip.css';
 
-import { PieChartData } from './Data';
-import { hsl } from './UtilChart';
+import { PieChartData } from '../data/Data';
+import { ToolTip } from '../utils/toolTip/ToolTip';
 
 // TODO : cant import it correctly
 const d3 = require('d3');
@@ -13,9 +14,8 @@ class PieChart extends Component {
 		const data = PieChartData,
 					m = 10,
 		    	r = 100,
-					z = d3.scale.linear().domain([0,data.length]).range([hsl(200,	0.59,	0.4), hsl(200,	0.59,	0.8)]);
-//	    		z = (d,i) => hsl(((360/data.length) * i) % 360, 0.7, 0.8 - (0.3 * d.data));
-
+					z = d3.scale.linear().domain([0,data.length]).range(['#1f5c7a', '#aed6ea']),
+					tooltip = ToolTip.create();
 		const svg = d3.select("#pie").selectAll("svg")
 	  	.data([data.map(e2 => e2.value)])
 	  	.enter().append("svg")
@@ -30,7 +30,9 @@ class PieChart extends Component {
 		    .attr("d", d3.svg.arc()
 		      .innerRadius(r / 2)
 		      .outerRadius(r))
-					.style("fill", function(d, i) { return z(i); });
+					.style("fill", (d, i) => z(i))
+				.on("mouseover", (d) => {ToolTip.on(tooltip, 'azzzeaze'); })
+				.on("mouseout", (d) => {ToolTip.off(tooltip);});
 	}
 
 	render() {
