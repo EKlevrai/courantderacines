@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
+import { Row, Col } from 'react-bootstrap';
 
 import Pie from './charts/Pie';
 
 class Chart extends Component {
   render() {
     return (
-			<div><Pie/></div>
-    );
+			<Row>
+				<Col md={2}></Col>
+				<Col md={8}>
+					<Pie/>
+				</Col>
+				<Col md={2}></Col>
+			</Row>
+		);
   }
 }
 
