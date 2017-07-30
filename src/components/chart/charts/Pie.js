@@ -61,7 +61,7 @@ class PieChart extends Component {
 
 	/**
 		* toggle type (donut to pie and vice-versa)
-		*	@param {integer} val : 1 for donut, 0 for pie
+		*	@param {integer} val : 1 for donut, other for pie
 		*/
 	toggleType = (val) => {
 		let r2;
@@ -78,7 +78,27 @@ class PieChart extends Component {
 			.outerRadius(r));
 	}
 
-
+	/**
+		* toggle color
+		*	@param {integer} val : 1 for red, 2 for green, 3 for blue
+		*/
+	toggleColor = (val) => {
+		let color;
+		if(val === 1){
+			color = ['#7a1f1f', '#cceaae'];
+		}
+		if(val === 2){
+			color = ['#4d8217', '#cceaae'];
+		}
+		if(val === 3){
+			color = ['#1f5c7a', '#aed6ea'];
+		}
+		const colors = d3.scale.linear().domain([0,PieChartData.length]).range(color);
+		svg.selectAll("path")
+		.transition()
+		.duration(1000)
+		.style("fill", (d, i) => colors(i));
+	}
 
 	render() {
 		const index = (this.state) ? this.state.index : -1;
@@ -87,14 +107,31 @@ class PieChart extends Component {
 				<Col md={3}>
 						<div id={'pie'}/>
 						<div className={'toggles'}>
-							<ToggleButtonGroup type={'radio'} name="donut/pie" defaultValue={1} onChange={this.toggleType}>
-	 							<ToggleButton value={1}>
-		 							Donut
-	 							</ToggleButton>
-	 							<ToggleButton value={2}>
-									Pie
-								</ToggleButton>
- 							</ToggleButtonGroup>
+							<p>
+								<h3>Chart type</h3>
+								<ToggleButtonGroup type={'radio'} name="donut/pie" defaultValue={1} onChange={this.toggleType}>
+		 							<ToggleButton value={1}>
+			 							Donut
+		 							</ToggleButton>
+		 							<ToggleButton value={2}>
+										Pie
+									</ToggleButton>
+	 							</ToggleButtonGroup>
+							</p>
+							<p>
+								<h3>Chart color</h3>
+								<ToggleButtonGroup type={'radio'} name="color" defaultValue={3} onChange={this.toggleColor}>
+		 							<ToggleButton value={1}>
+			 							Red
+		 							</ToggleButton>
+									<ToggleButton value={2}>
+										Green
+									</ToggleButton>
+									<ToggleButton value={3}>
+										Blue
+									</ToggleButton>
+	 							</ToggleButtonGroup>
+							</p>
 						</div>
 				</Col>
 				<Col md={9}>
