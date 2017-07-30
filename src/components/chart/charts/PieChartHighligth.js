@@ -24,7 +24,7 @@ class PieChartHighlight extends Component {
 				</div>
 	    );
 		}
-		return (<div></div>);
+		return (<h1>Click on the chart ! </h1>);
   }
 }
 

@@ -112,30 +112,26 @@ class PieChart extends Component {
 						<div id={'pie'}/>
 						<div className={'toggles'}>
 							<h3>Chart type</h3>
-							<p>
-								<ToggleButtonGroup type={'radio'} name="donut/pie" defaultValue={1} onChange={this.toggleType}>
-		 							<ToggleButton value={1}>
-			 							Donut
-		 							</ToggleButton>
-		 							<ToggleButton value={2}>
-										Pie
-									</ToggleButton>
-	 							</ToggleButtonGroup>
-							</p>
+							<ToggleButtonGroup type={'radio'} name="donut/pie" defaultValue={1} onChange={this.toggleType}>
+	 							<ToggleButton value={1}>
+		 							Donut
+	 							</ToggleButton>
+	 							<ToggleButton value={2}>
+									Pie
+								</ToggleButton>
+ 							</ToggleButtonGroup>
 							<h3>Chart color</h3>
-							<p>
-								<ToggleButtonGroup type={'radio'} name="color" defaultValue={3} onChange={this.toggleColor}>
-		 							<ToggleButton value={1}>
-			 							Red
-		 							</ToggleButton>
-									<ToggleButton value={2}>
-										Green
-									</ToggleButton>
-									<ToggleButton value={3}>
-										Blue
-									</ToggleButton>
-	 							</ToggleButtonGroup>
-							</p>
+							<ToggleButtonGroup type={'radio'} name="color" defaultValue={3} onChange={this.toggleColor}>
+	 							<ToggleButton value={1}>
+		 							Red
+	 							</ToggleButton>
+								<ToggleButton value={2}>
+									Green
+								</ToggleButton>
+								<ToggleButton value={3}>
+									Blue
+								</ToggleButton>
+ 							</ToggleButtonGroup>
 						</div>
 				</Col>
 				<Col md={9}>
