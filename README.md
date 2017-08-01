@@ -14,9 +14,12 @@ git clone https://github.com/EKlevrai/courantderacines.git
 cd courantderacines
 npm install
 ```
+#### Version
+```
+node.js : v6.7.0 or higher
+npm : v3.10.3 or higher
+```
 #### Run
 ```
-git clone https://github.com/EKlevrai/courantderacines.git
-cd courantderacines
 npm start
 ```
