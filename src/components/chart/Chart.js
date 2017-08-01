@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col, Tabs, Tab } from 'react-bootstrap';
 
 import Pie from './charts/Pie';
+import Bar from './charts/Bar';
 
 class Chart extends Component {
   render() {
@@ -15,7 +16,7 @@ class Chart extends Component {
 								<Pie/>
 							</Tab>
 							<Tab eventKey={'bar'} title="Bars">
-
+								<Bar/>
 							</Tab>
 						</Tabs>
 					</Tab.Container>
