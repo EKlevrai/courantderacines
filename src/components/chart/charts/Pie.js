@@ -28,6 +28,7 @@ class Pie extends Component {
 		*	@param {integer} val : 1 for donut, other for pie
 		*/
 	 toggleType(val) {
+	 	global.logger('toggleType');
 		let r2;
 		if(val === 1){
 			r2 = r/2;
@@ -47,6 +48,7 @@ class Pie extends Component {
 		*	@param {integer} val : 1 for red, 2 for green, 3 for blue
 		*/
 	toggleColor(val) {
+		global.logger('toggleColor');
 		let color;
 		if(val === 1){
 			color = ['#7a1f1f', '#cceaae'];
@@ -96,6 +98,7 @@ class Pie extends Component {
 					ToolTip.off(tooltip);
 				})
 				.on("click", (d, i) => {
+					global.logger('clickPie');
 					this.setState({
 						index: i,
 					})
