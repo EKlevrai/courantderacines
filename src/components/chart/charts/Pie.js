@@ -21,7 +21,7 @@ let r = 100;
 
 let svg;
 
-class PieChart extends Component {
+class Pie extends Component {
 
 	/**
 		* toggle type (donut to pie and vice-versa)
@@ -144,4 +144,4 @@ class PieChart extends Component {
 
 
 
-export default PieChart;
+export default Pie;
